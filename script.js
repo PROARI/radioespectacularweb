@@ -267,10 +267,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Utilidades ---
     function updateClock() {
-        const timezone = RADIO_CONFIG.timezone;
         const now = new Date();
-        const dateOptions = { timeZone: timezone, weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-        const timeOptions = { timeZone: timezone, hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        const timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
         dateElement.textContent = new Intl.DateTimeFormat('es-ES', dateOptions).format(now);
         timeElement.textContent = new Intl.DateTimeFormat('es-ES', timeOptions).format(now);
     }
