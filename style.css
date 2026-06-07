@@ -302,16 +302,16 @@ body::before {
     bottom: 0;
     left: 0;
     right: 0;
-    background: var(--footer-bg);
-    padding: 1rem 2rem;
+    background: #000000 !important;
+    padding: 0.8rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 8000;
-    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
-    border-top: 1px solid var(--footer-border);
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.4s ease;
-    color: var(--footer-text);
+    color: #ffffff !important;
 }
 
 .station-info {
@@ -331,7 +331,7 @@ body::before {
 .station-name {
     font-size: 1.1rem;
     font-weight: 700;
-    color: var(--footer-text);
+    color: #ffffff !important;
 }
 
 .volume-control {
@@ -340,7 +340,7 @@ body::before {
     gap: 15px;
     flex: 1;
     justify-content: flex-end;
-    color: var(--footer-text);
+    color: #ffffff !important;
 }
 
 
@@ -401,7 +401,19 @@ body::before {
 .playback-controls {
     flex: 1;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 6px;
+}
+
+.playback-controls .song-badge {
+    margin-top: 0;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: none;
+    padding: 6px 15px;
 }
 
 .extra-controls {
@@ -429,7 +441,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: 0.8rem;
-    color: var(--footer-text);
+    color: #ffffff !important;
 }
 
 #volumeSlider {
@@ -594,11 +606,13 @@ body::before {
     }
 
     .player-controls { 
-        padding: 0 15px !important; 
-        height: 70px !important;
+        padding: 12px 15px !important; 
+        height: auto !important;
         z-index: 9999 !important;
-        background: var(--footer-bg) !important;
-        color: var(--footer-text) !important;
+        background: #000000 !important;
+        color: #ffffff !important;
+        flex-direction: column !important;
+        gap: 12px !important;
     }
 
     #playPauseButton {
@@ -611,8 +625,39 @@ body::before {
         height: 40px !important;
     }
 
-    .station-name { font-size: 0.9rem !important; }
-    .extra-controls { display: none !important; }
+    .station-name { font-size: 0.9rem !important; color: #ffffff !important; }
+    
+    .station-info {
+        width: 100% !important;
+        justify-content: space-between !important;
+        flex: none !important;
+    }
+
+    .playback-controls {
+        width: 100% !important;
+        flex: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    .extra-controls { 
+        display: flex !important; 
+        width: 100% !important;
+        justify-content: center !important;
+        flex: none !important;
+    }
+
+    .volume-control {
+        width: 100% !important;
+        justify-content: center !important;
+        color: #ffffff !important;
+    }
+
+    #volumeSlider {
+        width: 60% !important;
+    }
 }
 
 /* Modal and Animations */
